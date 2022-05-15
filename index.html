@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add the link to the Bootstrap CDN from the Bootstrap site -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Add the link to our local style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Demo</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <!-- expand-lg = expands when you get to the large (992px) screen break.
+        if it's less than the large screen, it will show the hamburger menu 
+        bg-dark = background dark
+        navbar-dark = nav bar itself dark
+        py-3 = padding level 3 on the y axis
+        fixed-top = Your page will scroll under the nav-bar
+    -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <!-- Do the Brand Label -->
+            <a class="navbar-brand" href="#">Bob Brand</a>
+
+            <!-- Hamburger button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- ms-auto pushes the menu items to the right side -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#questions" class="nav-link">Questions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction -->
+    <!-- p-5 = padding level 5 all around
+         p-lg-0 = padding on large screens is 2
+         pt-lg-5 = padding on large screens at top is 5
+         text-center = center text
+         text-sm-start = text on small screens
+    -->
+    <section class="bg-dark text-light p-5 p-lg-2 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <!-- d-sm-flex = Don't display as flex row until you get past the mobile breakpoint 
+                 align-items-center = Align items on the center axis
+                 justify-content-between = Justify, between the paragraph and the image
+            -->
+            <div class="d-sm-flex align-items-center justify-content-betweeen">
+                <div>
+                    <h1>Modern Software <span class="text-warning">Excellence</span></h1>
+                    <p class="lead my-4">
+                        My name is Bob Brand and I’m an engineer. I enjoy learning, innovating, and making things. I
+                        build teams that create the technology that enhances our lives. I specialize in the art of
+                        software development.
+                    </p>
+                    <!-- <button class="btn btn-primary btn-lg">Download</button> -->
+                    <a href="./docs/2022_Bob_Brand_Resume.pdf" class="btn btn-primary btn-lg active" role="button"
+                        aria-pressed="true">Download</a>
+                </div>
+                <!-- w-50 = Make width 50%
+                d-none = Don't display image (when)
+                d-sm-block = Don't display on small size screen (mobile) -->
+                <img class="img-fluid w-50 d-none d-sm-block" src="img/bobprof.png" alt="">
+            </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-primary text-light p-5">
+        <div class="container">
+            <!-- Typing shortcut: .d-md-flex.justify-content-between.align-items-center -->
+            <div class="d-md-flex justify-content-between align-items-center">
+                <!-- mb-3 = margin bottom 3
+                     mb-md-0 = medium screens, no margin bottom -->
+                <h3 class="mb-3 mb-md-0">Connect</h3>
+                <!-- Putting this div inside the parent one renders these side by side -->
+                <!-- <div class="input-group news-input">
+                    <input type=" text" class="form-control" placeholder="Enter Email">
+                    <button class="btn btn-dark btn-lg" type="button">Contact</button>
+                </div> -->
+                <div class="input-group news-input">
+                    <input type="text" class="form-control" placeholder="Enter Email" id="contactEmail">
+                    <button class="btn btn-dark btn-lg" id="btnContact" type="button">
+                        Contact
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="p-5">
+        <div class="container">
+            <!-- g-4 = gap all around  -->
+            <div class="row text-center g-4">
+                <!-- col-md = don't create column until medium screen break  -->
+                <div class="col-md">
+
+                    <!-- First Card -->
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-person-square"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Technical<br>Management</h3>
+                            <p class="card-text">Building, coaching, and leading high<br>performance engineering teams
+                            </p>
+                            <a href="./html/technical_management.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Card -->
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Software<br>Development</h3>
+                            <p class="card-text">Specializing in connected devices, mobile<br>apps, and tooling
+                                for
+                                successful teams</p>
+                            <a href="./html/software_development.html" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Blog Sections -->
+    <section id="blog" class="p-5">
+        <div class="row align-items-center justify content between">
+            <div class="col-md">
+                <img src="http://placekitten.com/500/300" alt="" class="img-fluid">
+            </div>
+            <div class="col-md p-5">
+                <h2>Connected Devices</h2>
+                <!-- Making the paragraph 'lead' will make the text a little bigger -->
+                <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto pariatur? Culpa
+                    dolorum doloremque deserunt?</p>
+                <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto pariatur? Culpa
+                    dolorum doloremque deserunt?</p>
+                <a href="./html/connected_devices.html" class="btn btn-light mt-3">
+                    <i class="bi bi-chevron-right">Read More</i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="p-5 bg-dark text-light">
+        <div class="row align-items-center justify content between">
+            <div class="col-md p-5">
+                <h2>Engineering Culture</h2>
+                <!-- Making the paragraph 'lead' will make the text a little bigger -->
+                <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto pariatur? Culpa
+                    dolorum doloremque deserunt?</p>
+                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque ratione delectus officia
+                    illum quia odio soluta reprehenderit dignissimos quaerat. Tempora libero asperiores pariatur totam
+                    rem error illo deleniti nam doloremque.</p>
+                <a href="./html/engineering_culture.html" class="btn btn-light mt-3">
+                    <i class="bi bi-chevron-right">Read More</i>
+                </a>
+            </div>
+            <div class="col-md">
+                <img src="http://placekitten.com/500/301" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="p-5">
+        <div class="row align-items-center justify content between">
+            <div class="col-md">
+                <img src="http://placekitten.com/501/300" alt="" class="img-fluid">
+            </div>
+            <div class="col-md p-5">
+                <h2>Being Data Driven</h2>
+                <!-- Making the paragraph 'lead' will make the text a little bigger -->
+                <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto pariatur? Culpa
+                    dolorum doloremque deserunt?</p>
+                <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto pariatur? Culpa
+                    dolorum doloremque deserunt?</p>
+                <a href="./html/data_driven.html" class="btn btn-light mt-3">
+                    <i class="bi bi-chevron-right">Read More</i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="p-5 bg-dark text-light">
+        <div class="row align-items-center justify content between">
+            <div class="col-md p-5">
+                <h2>Hybrid Work</h2>
+                <!-- Making the paragraph 'lead' will make the text a little bigger -->
+                <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto pariatur? Culpa
+                    dolorum doloremque deserunt?</p>
+                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque ratione delectus officia
+                    illum quia odio soluta reprehenderit dignissimos quaerat. Tempora libero asperiores pariatur totam
+                    rem error illo deleniti nam doloremque.</p>
+                <a href="./html/hybrid_work.html" class="btn btn-light mt-3">
+                    <i class="bi bi-chevron-right">Read More</i>
+                </a>
+            </div>
+            <div class="col-md">
+                <img src="http://placekitten.com/501/301" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5 bg-primary text-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="questions">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-one">
+                            Where are you located?
+                        </button>
+                    </h2>
+                    <div id="question-one" class="accordion-collapse collapse text-dark" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            I live in America's finest city, San Diego, California
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-two">
+                            Can you help me with my project?
+                        </button>
+                    </h2>
+                    <div id="question-two" class="accordion-collapse collapse text-dark" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            I would be happy to discuss it with you. Please click the link above to send me an email.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-three">
+                            Are you hiring?
+                        </button>
+                    </h2>
+                    <div id="question-three" class="accordion-collapse collapse text-dark" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            Not at this momement, but check back later and I will update this page.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-four">
+                            Are you open to opportunities?
+                        </button>
+                    </h2>
+                    <div id="question-four" class="accordion-collapse collapse text-dark" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            Please click the link above to send me an email.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-left position-relative">
+        <div class="container">
+            <p class="small">Copyright &copy; 2022 Bob Brand</p>
+
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactLabel">Contact Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Fill this out and I will get back to you</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="form-first-name" class="col-form-label">
+                                First Name:
+                            </label>
+                            <input type="text" class="form-control" id="form-first-name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="form-last-name" class="col-form-label">Last Name:</label>
+                            <input type="text" class="form-control" id="form-last-name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" placeholder="Enter Email" id="form-email" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="col-form-label">Message</label>
+                            <textarea class="form-control" id="form-message"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary" id="btnSubmit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnContact').click(function () {
+                // alert('Contact pressed ' + $("#contactEmail").val());
+                // Pre-populate the email field with the info already entered
+                var contactModal = document.getElementById('contactModal');
+                var emailField = contactModal.querySelector('.modal-body input[id="form-email"]');
+                emailField.value = $("#contactEmail").val();
+                $('#contactModal').modal('show');
+            });
+
+            $('#btnSubmit').click(function () {
+                var formFirstName = $("#form-first-name").val()
+                var formLastName = $("#form-last-name").val()
+                var formEmail = $("#form-email").val()
+                var formMessage = $("#form-message").val()
+                alert('Submit is pressed ' + formFirstName + ' ' + formLastName + ' ' + formEmail + ' ' + formMessage);
+                $('#contactModal').modal('hide');
+            });
+        })
+    </script>
+</body>
+
+</html>

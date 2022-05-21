@@ -1,47 +1,47 @@
-// function sleep(milliseconds) {
-//     const date = Date.now();
-//     let currentDate = null;
-//     do {
-//         currentDate = Date.now();
-//     } while (currentDate - date < milliseconds);
-// }
+// Copyright 2022 
+// Bob Brand 
+// All Rights Reserved.
 
-//
 // Click handler for Downloads button.
-// Zips a file and serves it to the user.
-//
+//    Zips requested files and serves it to the user.
 $(document).ready(function () {
     $('#btnDownload').click(function () {
         $('#downloadModal').modal('show');
     });
 
     $('#btnZipDownload').click(function () {
-        var file = "docs/2022_Bob_Brand_Resume.pdf"
         var zipFile = "bobbrand_download.zip"
         var zip = new JSZip();
+        var count = 0;
+        var downloads = []
 
+        // Any potential download checkboxes handled here
         if ($('#checkboxIntro').is(':checked')) {
-            file = "docs/2022_Bob_Brand_Resume.pdf"
+            downloads.push('docs/2022_Bob_Brand_Intro.pdf');
+        }
+        if ($('#checkboxResume').is(':checked')) {
+            downloads.push('docs/2022_Bob_Brand_Resume.pdf');
         }
 
-        if ($('#checkboxIntro').is(':checked')) {
+        downloads.forEach(function (document) {
+            var filename = document;
 
-        }
+            // loading a file and add it in a zip file
+            JSZipUtils.getBinaryContent(document, function (err, data) {
+                if (err) {
+                    throw err; // or handle the error
+                }
+                zip.file(filename, data, { binary: true });
+                count++;
+                if (count == downloads.length) {
+                    zip.generateAsync({ type: 'blob' }).then(function (content) {
+                        saveAs(content, zipFile);
+                    });
+                }
+            }); // getBinaryContent
+        });  // forEach
 
-        // $('#downloadModal').modal('hide');
+        $('#downloadModal').modal('hide');
 
-        JSZipUtils.getBinaryContent(file, function (err, data) {
-            if (err) {
-                alert('Oops. Something went wrong.');
-                throw err;
-            }
-            else {
-                zip.file(file, data, { binary: true });
-                console.log("Files are zipped")
-                zip.generateAsync({ type: "Blob" }).then(function (content) {
-                    saveAs(content, zipFile);
-                });
-            }
-        });
-    });
-});
+    });  // click handler
+}); // ready

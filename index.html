@@ -23,6 +23,8 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate.min.js"></script>
     <script
         src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.9.1/jszip.min.js"></script>
@@ -133,12 +135,12 @@
                      mb-md-0 = medium screens, no margin bottom -->
                 <h3 class="mb-3 mb-md-0">Connect</h3>
                 <!-- Putting this div inside the parent one renders these side by side -->
-                <div class="input-group news-input">
-                    <input type="text" class="form-control" placeholder="Enter Email" id="contactEmail">
-                    <button class="btn btn-dark btn-lg" id="btnContact" type="button">
+                <form id="emailButtonForm" class="input-group news-input">
+                    <input type="email" class="form-control" placeholder="Enter Email" id="contactEmail" required>
+                    <button class="btn btn-dark btn-lg" id="btnContact" type="submit">
                         Contact
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -389,7 +391,7 @@
                 </div>
                 <div class="modal-body">
                     <p class="lead">Fill this out and I will get back to you</p>
-                    <form>
+                    <form name="contact-form">
                         <div class="mb-3">
                             <label for="form-first-name" class="col-form-label">
                                 First Name:

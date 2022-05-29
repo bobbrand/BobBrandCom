@@ -15,10 +15,58 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="d-sm-flex align-items-center justify-content-betweeen bg-dark text-light p-4">
-            <div class="bg-dark p-5">
-                <h1>Technical Management</h1>
+
+    <!-- Navbar -->
+
+    <!-- expand-lg = expands when you get to the large (992px) screen break.
+        if it's less than the large screen, it will show the hamburger menu 
+        bg-dark = background dark
+        navbar-dark = nav bar itself dark
+        py-3 = padding level 3 on the y axis
+        fixed-top = Your page will scroll under the nav-bar
+    -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <!-- Do the Brand Label -->
+
+            <img class="img-thumbnail float-start bg-transparent border-0" src="../img/ComputerBird.png" alt="" width="60">
+            <a class="navbar-brand p-2" href="#">Bobbrand.com</a>
+
+
+            <!-- Hamburger button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- ms-auto pushes the menu items to the right side -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="../#first-blog" class="nav-link lead">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../#questions" class="nav-link lead">Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/bobbrand-software" class="nav-link lead">
+                            <img src="../img/LI-In-Bug.png" width="40">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/bobbrand" class="nav-link lead">
+                            <img src="../img/GitHub-Mark-Light-64px.png" width="35">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="d-sm-flex align-items-center justify-content-betweeen bg-dark text-light p-5 p-lg-2 pt-lg-5 ">
+        <div class="container">
+            <div class="bg-dark p-0">
+                <h1><br>Technical Management</h1>
 
                 <div class="single-post-content-wrapper pb-5">
                     I have managed engineering teams for more than 20 years in both large and small companies. This experience has shaped my
@@ -33,13 +81,13 @@
                     the years.
                 </div>
 
-                <!-- First Row for Qualities -->
+                <!-- First Row for Style Qualities -->
                 <div class="row mt-5 no-gutters pt-5 bg-secondary">
 
                     <!-- Create two columns -->
-                    <div class="col-md-6">
+                    <div class="col-md">
                         <h3>Communication</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
+                        <div class="image-wrapper float-end pe-5 p-1 d-none d-md-block">
                             <img src="../img/communication.jpg" alt="" width="200">
                         </div>
                         <div class="single-post-content-wrapper pb-5">
@@ -47,9 +95,9 @@
                             Saepe, magnam adipisci eos expedita quasi debitis ratione itaque quibusdam illo eaque blanditiis.
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md">
                         <h3>Force Multipliers</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
+                        <div class="image-wrapper float-end pe-5 p-1 d-none d-md-block">
                             <img src="../img/force_multiplier.png" alt="" width="100">
                         </div>
                         <div class="single-post-content-wrapper pb-5">
@@ -63,9 +111,9 @@
                 <!-- Create another row -->
                 <div class="row no-gutters bg-secondary">
                     <!-- Create another two columns -->
-                    <div class="col-md-6 p-2">
+                    <div class="col-md p-2">
                         <h3>Collaboration</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
+                        <div class="image-wrapper float-end pe-5 p-1 d-none d-md-block">
                             <img src="../img/collaboration.jpg" alt="" width="200">
                         </div>
                         <div class="single-post-content-wrapper pb-5">
@@ -74,9 +122,9 @@
                             beatae aspernatur praesentium.
                         </div>
                     </div>
-                    <div class="col-md-6 p-2">
+                    <div class="col-md p-2">
                         <h3>Servant Leadership</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
+                        <div class="image-wrapper float-end pe-5 p-1 d-none d-md-block">
                             <img src="../img/servant_leadership.png" alt="" width="200">
                         </div>
                         <div class="single-post-content-wrapper pb-5">
@@ -90,9 +138,9 @@
                 <!-- Create another row -->
                 <div class="row no-gutters bg-secondary">
                     <!-- Create another two columns -->
-                    <div class="col-md-6 p-2">
+                    <div class="col-md p-2">
                         <h3>Agile</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
+                        <div class="image-wrapper float-end pe-5 p-1 d-none d-md-block">
                             <img src="../img/agile_dev.jpg" alt="" width="200">
                         </div>
                         <div class="single-post-content-wrapper pb-5">
@@ -100,9 +148,9 @@
                             officiis, fuga sed hic quasi quo ad ipsa blanditiis officia vitae, temporibus aliquid repudiandae.
                         </div>
                     </div>
-                    <div class="col-md-6 p-2">
+                    <div class="col-md p-2">
                         <h3>Transparency</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
+                        <div class="image-wrapper float-end pe-5 p-1 d-none d-md-block">
                             <img src="../img/transparency.jpg" alt="" width="200">
                         </div>
                         <div class="single-post-content-wrapper pb-5">
@@ -112,118 +160,149 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Experience Examples -->
-                <div class="row mt-5 no-gutters bg-dark">
-                    <div class="col-md-12">
-                        <h1>Management Experience</h1>
-                        <!-- <div class="image-wrapper float-end pe-5 p-1">
-                            <img src="https://placeimg.com/200/100/animals" alt="">
-                        </div> -->
-                        <div class="single-post-content-wrapper pb-5">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae fuga excepturi facilis ab autem. Error dignissimos ex beatae,
-                            reprehenderit repellat, veritatis consequuntur quae nulla saepe, asperiores quasi est quia explicabo!
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Create a Row for Startups-->
-                <div class="row pt-5 no-gutters bg-dark">
-
-                    <div class="row p-3 bg-primary">
-                        <h2>Start-ups</h2>
-                        <div class="lead">Managing in start-up environments often means doing more with less</div>
-                    </div>
-                    <!-- Create another two columns -->
-                    <div class="col-md-6 pt-4 p-2">
-                        <h3>WIDCOMM</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
-                            <img src="../img/widcomm_logo.png" alt="" width="100">
-                        </div>
-                        <div class="single-post-content-wrapper pb-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima ea natus quia consequuntur repellat autem
-                            officiis, fuga sed hic quasi quo ad ipsa blanditiis officia vitae, temporibus aliquid repudiandae.
-                        </div>
-                    </div>
-                    <div class="col-md-6 pt-4 p-2">
-                        <h3>Staccato Communications</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
-                            <img src="../img/staccato_logo.jpeg" alt="" width="100" height="80">
-                        </div>
-                        <div class="single-post-content-wrapper pb-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem soluta minus voluptatibus, eius quos id sed nulla eum fugiat
-                            a temporibus tempora, beatae, molestias adipisci iusto! Iure delectus qui nostrum.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Create a Row for Semis --->
-                <div class="row pt-5 no-gutters bg-dark">
-
-                    <div class="row p-3 bg-primary">
-                        <h2>Semis</h2>
-                        <div class="lead">Semiconductor companies are a foundation of innovation</div>
-                    </div>
-
-                    <!-- Create another two columns -->
-                    <div class="col-md-6 pt-4 p-2">
-                        <h3>Broadcom</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
-                            <img src="../img/broadcom_logo.jpeg" alt="" width="100" height="65">
-                        </div>
-                        <div class="single-post-content-wrapper pb-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima ea natus quia consequuntur repellat autem
-                            officiis, fuga sed hic quasi quo ad ipsa blanditiis officia vitae, temporibus aliquid repudiandae.
-                        </div>
-                    </div>
-                    <div class="col-md-6 pt-4 p-2">
-                        <h3>Cypress / Infineon</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
-                            <img src="../img/infineon_logo.jpeg" alt="" width="100" height="65">
-                        </div>
-                        <div class="single-post-content-wrapper pb-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos ea facilis excepturi illo, suscipit placeat aperiam
-                            vitae sequi maxime voluptatem impedit obcaecati facere quos maiores pariatur a totam eaque.
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Create a Row for Product Companies --->
-                <div class="row pt-5 no-gutters bg-dark">
-
-                    <div class="row p-3 bg-primary">
-                        <h2>Product Companies</h2>
-                        <div class="lead">Product companies bring technology to consumers</div>
-                    </div>
-
-                    <!-- Create another two columns -->
-                    <div class="col-md pt-4 p-2">
-                        <h3>GoPro</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
-                            <img src="../img/gopro_logo.png" alt="" width="100">
-                        </div>
-                        <div class="single-post-content-wrapper pb-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima ea natus quia consequuntur repellat autem
-                            officiis, fuga sed hic quasi quo ad ipsa blanditiis officia vitae, temporibus aliquid repudiandae.
-                        </div>
-                    </div>
-                    <div class="col-md pt-4 p-2">
-                        <h3>Turtle Beach</h3>
-                        <div class="image-wrapper float-end pe-5 p-1">
-                            <img src="../img/turtle_beach_logo.jpeg" alt="" width="100">
-                        </div>
-                        <div class="single-post-content-wrapper pb-5">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos ea facilis excepturi illo, suscipit placeat aperiam
-                            vitae sequi maxime voluptatem impedit obcaecati facere quos maiores pariatur a totam eaque.
-                        </div>
-                    </div>
-                </div>
-
-
-                <a href="javascript:javascript:history.go(-1)" class="btn btn-secondary mt-3">Back</a>
             </div>
         </div>
+    </section>
+
+    <!-- Experience Examples -->
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+            <div class="row mt-5 no-gutters bg-dark">
+                <div class="col-md-12">
+                    <h1>Management Experience</h1>
+                    <!-- <div class="image-wrapper float-end pe-5 p-1">
+                            <img src="https://placeimg.com/200/100/animals" alt="">
+                        </div> -->
+                    <div class="single-post-content-wrapper pb-5">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae fuga excepturi facilis ab autem. Error dignissimos ex beatae,
+                        reprehenderit repellat, veritatis consequuntur quae nulla saepe, asperiores quasi est quia explicabo!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create a Row for Startups-->
+    <section class="bg-primary text-light p-4 pt-5">
+        <div class="container">
+            <h2>Start-ups</h2>
+            <div class="lead">Managing in start-up environments often means doing more with less</div>
+        </div>
+    </section>
+
+
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+            <div class="row p-3 bg-secondary">
+
+                <!-- Create another two columns -->
+                <div class="col-md-6 pt-4 p-2">
+                    <h3>WIDCOMM</h3>
+                    <div class="image-wrapper float-end pe-5 p-1">
+                        <img src="../img/widcomm_logo.png" alt="" width="100">
+                    </div>
+                    <div class="single-post-content-wrapper pb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima ea natus quia consequuntur repellat autem
+                        officiis, fuga sed hic quasi quo ad ipsa blanditiis officia vitae, temporibus aliquid repudiandae.
+                    </div>
+                </div>
+                <div class="col-md-6 pt-4 p-2">
+                    <h3>Staccato Communications</h3>
+                    <div class="image-wrapper float-end pe-5 p-1">
+                        <img src="../img/staccato_logo.jpeg" alt="" width="100" height="80">
+                    </div>
+                    <div class="single-post-content-wrapper pb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem soluta minus voluptatibus, eius quos id sed nulla eum fugiat
+                        a temporibus tempora, beatae, molestias adipisci iusto! Iure delectus qui nostrum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Create a Row for Semis -->
+    <section class="bg-primary text-light p-3 pt-5">
+        <div class="container">
+            <h2>Semis</h2>
+            <div class="lead">Semiconductor companies are a foundation of innovation</div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+            <div class="row p-3 bg-secondary">
+
+
+                <!-- Create another two columns -->
+                <div class="col-md-6 pt-4 p-2">
+                    <h3>Broadcom</h3>
+                    <div class="image-wrapper float-end pe-5 p-1">
+                        <img src="../img/broadcom_logo.jpeg" alt="" width="100" height="65">
+                    </div>
+                    <div class="single-post-content-wrapper pb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima ea natus quia consequuntur repellat autem
+                        officiis, fuga sed hic quasi quo ad ipsa blanditiis officia vitae, temporibus aliquid repudiandae.
+                    </div>
+                </div>
+                <div class="col-md-6 pt-4 p-2">
+                    <h3>Cypress / Infineon</h3>
+                    <div class="image-wrapper float-end pe-5 p-1">
+                        <img src="../img/infineon_logo.jpeg" alt="" width="100" height="65">
+                    </div>
+                    <div class="single-post-content-wrapper pb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos ea facilis excepturi illo, suscipit placeat aperiam
+                        vitae sequi maxime voluptatem impedit obcaecati facere quos maiores pariatur a totam eaque.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Create a Row for Product Companies --->
+    <section class="bg-primary text-light p-3 pt-5">
+        <div class="container">
+            <h2>Product Companies</h2>
+            <div class="lead">Product companies bring technology to consumers</div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+            <div class="row p-3 bg-secondary">
+
+
+                <!-- Create another two columns -->
+                <div class="col-md pt-4 p-2">
+                    <h3>GoPro</h3>
+                    <div class="image-wrapper float-end pe-5 p-1">
+                        <img src="../img/gopro_logo.png" alt="" width="100">
+                    </div>
+                    <div class="single-post-content-wrapper pb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima ea natus quia consequuntur repellat autem
+                        officiis, fuga sed hic quasi quo ad ipsa blanditiis officia vitae, temporibus aliquid repudiandae.
+                    </div>
+                </div>
+                <div class="col-md pt-4 p-2">
+                    <h3>Turtle Beach</h3>
+                    <div class="image-wrapper float-end pe-5 p-1">
+                        <img src="../img/turtle_beach_logo.jpeg" alt="" width="100">
+                    </div>
+                    <div class="single-post-content-wrapper pb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos ea facilis excepturi illo, suscipit placeat aperiam
+                        vitae sequi maxime voluptatem impedit obcaecati facere quos maiores pariatur a totam eaque.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-light p-3 pt-5 pb-5">
+        <div class="container">
+            <a href="javascript:javascript:history.go(-1)" class="btn btn-secondary mt-3">Back</a>
+        </div>
+    </section>
 
 
 </body>

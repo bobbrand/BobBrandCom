@@ -5,33 +5,311 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add the link to the Bootstrap CDN from the Bootstrap site -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous" />
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- Add the link to our local style sheet -->
     <link rel="stylesheet" href="style.css" />
-    <title>Software Development</title>
+    <title>Technical Management</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="d-sm-flex align-items-center justify-content-betweeen bg-dark text-light p-5">
-            <div>
-                <h1>Software Development</h1>
-                <p class="lead my-4">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde eaque, officiis laborum
-                    recusandae officia ad suscipit voluptatibus assumenda maiores dolor, ipsam amet quos blanditiis,
-                    accusantium autem. Nihil iure architecto accusantium.
-                </p>
+
+    <!-- Navbar -->
+
+    <!-- expand-lg = expands when you get to the large (992px) screen break.
+        if it's less than the large screen, it will show the hamburger menu 
+        bg-dark = background dark
+        navbar-dark = nav bar itself dark
+        py-3 = padding level 3 on the y axis
+        fixed-top = Your page will scroll under the nav-bar
+    -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <!-- Do the Brand Label -->
+
+            <img class="img-thumbnail float-start bg-transparent border-0" src="../img/ComputerBird.png" alt="" width="60">
+            <a class="navbar-brand p-2" href="#">Bobbrand.com</a>
+
+
+            <!-- Hamburger button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- ms-auto pushes the menu items to the right side -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="../#first-blog" class="nav-link lead">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../#skills" class="nav-link lead">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../#questions" class="nav-link lead">Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/bobbrand-software" class="nav-link lead">
+                            <img src="../img/LI-In-Bug.png" width="40">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/bobbrand" class="nav-link lead">
+                            <img src="../img/GitHub-Mark-Light-64px.png" width="35">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="d-sm-flex align-items-center justify-content-betweeen bg-dark text-light p-5 p-lg-2 pt-lg-5 ">
+        <div class="container">
+            <div class="bg-dark p-3 pt-5">
+                <h1><br>Software Development</h1>
+                <div class="single-post-content-wrapper pb-5">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum iusto impedit minus reiciendis harum dignissimos ex, debitis
+                    enim eius ipsam nulla! Corrupti alias error eaque blanditiis cumque tenetur, recusandae dignissimos?
+                </div>
+            </div>
+
+            <!-- Embedded Development Section -->
+
+            <!-- Overview Row for Embedded Programming Projects -->
+            <div class="row mt-5 no-gutters pt-4 p-3 bg-secondary">
+                <h2>Embedded C Development</h2>
+                <div class="single-post-content-wrapper">
+                    My earliest work as a software engineer was developing embedded real-time software in C and assembly for mobile phones. Throughout
+                    my career, I have adapted and evolved my capability to program on several platforms and languages, but
+                    I remain completely comfortable in the embedded RTOS programming environment. My Computer Science Masters
+                    was for Data Communications, and I have been working in wireless communications throughout my career.
+                    It is no surprise that recent projects highlighted here feature wireless connectivity.
+                </div>
+
+                <!-- Create two columns -->
+                <div class="col-md p-3 pt-5">
+                    <h3>Bluetooth LE for Gaming Headset</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/communication.jpg" alt="" width="200">
+                    </div> -->
+                    <div class="single-post-content-wrapper">
+                        One of the teams I was managing found itself in a difficult position. Our supplier reported late in the program that they
+                        would be unable to deliver BLE connectivity. This would block mobile connectivity for command and
+                        control of the headset, a key product requirement. To prevent the project from falling behind, over
+                        the course of two sprints, I implemented BLE support in the headset using an available Bluetopia
+                        stack I had not used previously. This involved defining and implementing the GATT database, services,
+                        characteristics, advertising, connections, and connecting the the endpoints to the data store on
+                        the headset. I created and reviewed a design using PlantUML, implemented the feature in C, implemented
+                        a test mock that helped me to debug the logic more quickly, and worked with our mobile apps developers
+                        to test the functionality with iOS and Android applications.
+                    </div>
+                </div>
+                <div class="col-md p-3 pt-5">
+                    <h3>Bluetooth Audio and BLE Subsystem</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/force_multiplier.png" alt="" width="100">
+                    </div> -->
+                    <div class="single-post-content-wrapper pb-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis, nulla illo blanditiis expedita quas quidem dolore distinctio
+                        eaque natus est, asperiores dolorem sequi laboriosam explicabo, hic eius veritatis facere! Modi repellendus
+                        ex quia iusto alias, recusandae accusamus repudiandae itaque? Ducimus aliquam officia, ullam quod
+                        quibusdam assumenda voluptatum doloremque quisquam, est debitis magni suscipit saepe similique nemo
+                        numquam molestiae? Minima odit sint eum, aperiam dolor, iusto non ratione quae dicta adipisci tempora
+                        perspiciatis commodi nemo quos asperiores assumenda quidem sequi porro! Consequuntur, quas?
+                    </div>
+                    <div class="bg-primary p-4">
+                        <h5>Bluetooth Profile Qualification</h5>
+                        <div class="image-wrapper float-end pe-0 p-2 d-none d-md-block">
+                            <img src="../img/bluetooth-logo.png" alt="" width="100">
+                        </div>
+                        <p>Part of the development and integration of the Bluetooth subsystem onto various products included
+                            Bluetooth Pre-Qualification testing using the Bluetooth SIG PTS tester, setting up projects in
+                            LaunchStudio, executing tests, collecting logs, debugging the implementation, publishing reports,
+                            and working with BQTFs to generate the End Product Listings</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Python Development Section -->
+
+            <!-- Overview Row for Python Projects -->
+            <div class="row mt-5 no-gutters pt-4 p-3 bg-secondary">
+                <h2>Python Development</h2>
+                <div class="single-post-content-wrapper">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque provident debitis illo, ducimus nobis ullam quam cumque aspernatur
+                    nulla laboriosam doloribus dolorem praesentium asperiores earum corporis architecto sunt dolore. Officia,
+                    rerum magnam modi quaerat facilis tempora autem voluptate! Odit veniam voluptatem voluptate cupiditate
+                    facilis ut autem, ex, ad distinctio cumque modi. Accusantium qui, maxime veniam nulla explicabo nisi?
+                    Tenetur, at quae rerum blanditiis, expedita labore, eligendi veniam sapiente suscipit fugiat quo animi
+                    dolor tempora iste fugit architecto cumque ex!
+                </div>
+
+                <!-- Create two columns -->
+                <div class="col-md p-3 pt-5">
+                    <h3>Multi-threaded Gang Programmer</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/communication.jpg" alt="" width="200">
+                    </div> -->
+                    <div class="single-post-content-wrapper">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga repudiandae iure totam commodi nemo eum tempore
+                        voluptatem, impedit necessitatibus culpa ipsam inventore, reprehenderit consectetur maxime similique
+                        iste, iusto perferendis. Id facilis, perspiciatis velit voluptate veniam expedita magnam ipsum repellendus,
+                        alias, libero rerum magni ducimus doloremque. Laboriosam odio accusantium tempora dolore necessitatibus
+                        fuga ipsa vitae magnam, saepe, nemo nesciunt fugiat. Perferendis eius quibusdam laboriosam iste soluta
+                        at quo!
+                    </div>
+                </div>
+
+                <div class="col-md p-3 pt-5">
+                    <h3>Relay Control for Test Automation</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/force_multiplier.png" alt="" width="100">
+                    </div> -->
+                    <div class="single-post-content-wrapper">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis, nulla illo blanditiis expedita quas quidem dolore distinctio
+                        eaque natus est, asperiores dolorem sequi laboriosam explicabo, hic eius veritatis facere! Modi repellendus
+                        ex quia iusto alias, recusandae accusamus repudiandae itaque? Ducimus aliquam officia, ullam quod
+                        quibusdam assumenda voluptatum doloremque quisquam, est debitis magni suscipit saepe similique nemo
+                        numquam molestiae? Minima odit sint eum, aperiam dolor, iusto non ratione quae dicta adipisci tempora
+                        perspiciatis commodi nemo quos asperiores assumenda quidem sequi porro! Consequuntur, quas?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create another row -->
+            <div class="row no-gutters p-3 bg-secondary">
+                <!-- Create two columns -->
+                <div class="col-md p-3 pt-5">
+                    <h3>GitHub Actions Pipeline</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/communication.jpg" alt="" width="200">
+                    </div> -->
+                    <div class="single-post-content-wrapper">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga repudiandae iure totam commodi nemo eum tempore
+                        voluptatem, impedit necessitatibus culpa ipsam inventore, reprehenderit consectetur maxime similique
+                        iste, iusto perferendis. Id facilis, perspiciatis velit voluptate veniam expedita magnam ipsum repellendus,
+                        alias, libero rerum magni ducimus doloremque. Laboriosam odio accusantium tempora dolore necessitatibus
+                        fuga ipsa vitae magnam, saepe, nemo nesciunt fugiat. Perferendis eius quibusdam laboriosam iste soluta
+                        at quo!
+                    </div>
+                </div>
+                <div class="col-md p-3 pt-5">
+                    <h3>Auto-Generated Release Notes</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/force_multiplier.png" alt="" width="100">
+                    </div> -->
+                    <div class="single-post-content-wrapper">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis, nulla illo blanditiis expedita quas quidem dolore distinctio
+                        eaque natus est, asperiores dolorem sequi laboriosam explicabo, hic eius veritatis facere! Modi repellendus
+                        ex quia iusto alias, recusandae accusamus repudiandae itaque? Ducimus aliquam officia, ullam quod
+                        quibusdam assumenda voluptatum doloremque quisquam, est debitis magni suscipit saepe similique nemo
+                        numquam molestiae? Minima odit sint eum, aperiam dolor, iusto non ratione quae dicta adipisci tempora
+                        perspiciatis commodi nemo quos asperiores assumenda quidem sequi porro! Consequuntur, quas?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create another row -->
+            <div class="row no-gutters p-3 bg-secondary">
+                <!-- Create two columns -->
+                <div class="col-md p-3 pt-5">
+                    <h3>JIRA Burndown Tool</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/communication.jpg" alt="" width="200">
+                        </div> -->
+                    <div class="single-post-content-wrapper">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga repudiandae iure totam commodi nemo eum tempore
+                        voluptatem, impedit necessitatibus culpa ipsam inventore, reprehenderit consectetur maxime similique
+                        iste, iusto perferendis. Id facilis, perspiciatis velit voluptate veniam expedita magnam ipsum repellendus,
+                        alias, libero rerum magni ducimus doloremque. Laboriosam odio accusantium tempora dolore necessitatibus
+                        fuga ipsa vitae magnam, saepe, nemo nesciunt fugiat. Perferendis eius quibusdam laboriosam iste soluta
+                        at quo!
+                    </div>
+                </div>
+                <div class="col-md p-3 pt-5">
+                    <h3>Trello Tools</h3>
+                    <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/force_multiplier.png" alt="" width="100">
+                        </div> -->
+                    <div class="single-post-content-wrapper">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis, nulla illo blanditiis expedita quas quidem dolore distinctio
+                        eaque natus est, asperiores dolorem sequi laboriosam explicabo, hic eius veritatis facere! Modi repellendus
+                        ex quia iusto alias, recusandae accusamus repudiandae itaque? Ducimus aliquam officia, ullam quod
+                        quibusdam assumenda voluptatum doloremque quisquam, est debitis magni suscipit saepe similique nemo
+                        numquam molestiae? Minima odit sint eum, aperiam dolor, iusto non ratione quae dicta adipisci tempora
+                        perspiciatis commodi nemo quos asperiores assumenda quidem sequi porro! Consequuntur, quas?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education and Training Section -->
+    <section class="bg-dark text-light p-2">
+        <div class="container">
+
+            <!-- First Row for Education -->
+            <div class="row mt-5 no-gutters justify-content-around pt-4 p-3 bg-primary">
+                <h2>Education and Training</h2>
+                <div class="single-post-content-wrapper pb-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque provident debitis illo, ducimus nobis ullam quam cumque aspernatur
+                    nulla laboriosam doloribus dolorem praesentium asperiores earum corporis architecto sunt dolore. Officia,
+                    rerum magnam modi quaerat facilis tempora autem voluptate! Odit veniam voluptatem voluptate cupiditate
+                    facilis ut autem, ex, ad distinctio cumque modi. Accusantium qui, maxime veniam nulla explicabo nisi?
+                    Tenetur, at quae rerum blanditiis, expedita labore, eligendi veniam sapiente suscipit fugiat quo animi
+                    dolor tempora iste fugit architecto cumque ex!
+                </div>
+
+                <!-- Create two columns -->
+                <div class="col-md-5 bg-light text-secondary p-3">
+                    <div class="image-wrapper float-end pe-0 p-2 d-none d-md-block">
+                        <img src="../img/cwru-eng.png" alt="" width="100">
+                    </div>
+                    <h5 class="text-dark">Case Western Reserve University</h5>
+                    <b>B.E. Computer Engineering, 1989</b>
+                </div>
+                <div class="col-md-5 bg-light text-secondary p-3">
+                    <div class="image-wrapper float-end pe-0 p-2 d-none d-md-block">
+                        <img src="../img/depaul-univ.png" alt="" width="100">
+                    </div>
+                    <h5 class="text-dark">Depaul University</h5>
+                    <b></b>M.S. Computer Science, Data Comm., 1996<br>GPA = 4.0/4.0</b>
+                </div>
+            </div>
+
+            <!-- Create another row -->
+            <div class="row no-gutters justify-content-around p-3 bg-primary">
+                <!-- Create two columns -->
+                <div class="col-md-5  bg-secondary text-white p-3">
+                    <ul>
+                        <li>one</li>
+                        <li>two</li>
+                        <li>three</li>
+                        <li>four</li>
+                        <li>five</li>
+                    </ul>
+                </div>
+                <div class="col-md-5 bg-white text-dark p-3">
+                    <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
+                        <img src="../img/big-nerd-ranch.jpeg" alt="" width="100">
+                    </div>
+                    <b>iOS Essentials with Swift</b>
+                    <p>An intense seven-day bootcamp in Asilomar, California focusing on Swift and iOS App Development.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Last section holds the back button -->
+        <section class="bg-dark text-light p-3 pt-5 pb-5">
+            <div class="container">
                 <a href="javascript:javascript:history.go(-1)" class="btn btn-secondary mt-3">Back</a>
             </div>
-            <!-- w-50 = Make width 50%
-        d-none = Don't display image (when)
-        d-sm-block = Don't display on small size screen (mobile) -->
-            <img class="img-fluid w-50 d-none d-sm-block" src="http://placekitten.com/200/300" alt="">
-        </div>
-    </div>
+        </section>
 </body>
 
 </html>

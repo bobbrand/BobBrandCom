@@ -3,7 +3,7 @@
 // All Rights Reserved.
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     var emailContactForm = document.getElementById('emailContactForm');
     var emailMessageForm = document.getElementById('emailMessageForm');
@@ -15,7 +15,7 @@ $(document).ready(function () {
     //    Passes the email address to the contact form
     function onClickContact(event) {
         // console.log(event.timeStamp);
-        event.preventDefault();   // The default submit behavior blocks the modal display :(
+        event.preventDefault(); // The default submit behavior blocks the modal display :(
 
         // Pre-populate the email field with the info already entered
         var contactModal = document.getElementById('contactModal');
@@ -28,10 +28,10 @@ $(document).ready(function () {
     // Click handler for Submit button.
     //    Aggregates the contact info and message and emails 
     function onClickMessage(event) {
-        //console.log(event.timeStamp);
+        // console.log(event.timeStamp);
         event.preventDefault();
 
-        // C0F79DFE84C21854AFCA253C6C1E0BEB0874
+
         var msgSentToast = document.getElementById('msgSentToast');
         var myToast = bootstrap.Toast.getOrCreateInstance(msgSentToast);
 
@@ -39,9 +39,9 @@ $(document).ready(function () {
         var formLastName = $("#form-last-name").val()
         var formEmail = $("#form-email").val()
         var formMessage = $("#form-message").val()
-        var body = "First: " + formFirstName + '<br>'
-            + "Last: " + formLastName + '<br>'
-            + "Email: " + formEmail + '<br><br>';
+        var body = "First: " + formFirstName + '<br>' +
+            "Last: " + formLastName + '<br>' +
+            "Email: " + formEmail + '<br><br>';
         body += formMessage;
 
         // alert('Submit is pressed ' + formFirstName + ' ' + formLastName + ' ' + formEmail + ' ' + formMessage);
@@ -49,13 +49,14 @@ $(document).ready(function () {
         $('#contactModal').modal('hide');
 
         Email.send({
-            SecureToken: "a5991df1-0724-469f-a636-e19135500559",
+            SecureToken: "77738cb0-dfec-4138-b31d-bb096863bd0e",
             To: 'bobbrand2@gmail.com',
-            From: "bobbrand2@gmail.com",
+            From: "nospam@bobbrand.com",
             Subject: "Contact from Bobbrand.com",
             Body: body
         }).then(
             myToast.show()
+            // message => alert(message)
         );
     }
 });

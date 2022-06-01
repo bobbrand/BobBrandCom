@@ -55,8 +55,8 @@ $(document).ready(function() {
             Subject: "Contact from Bobbrand.com",
             Body: body
         }).then(
-            myToast.show()
-            // message => alert(message)
+            // myToast.show()
+            message => alert(message)
         );
     }
 });

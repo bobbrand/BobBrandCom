@@ -58,7 +58,7 @@
                         <a href="#" class="nav-link lead">Develop</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../#questions" class="nav-link lead">Questions</a>
+                        <a href="../#questions" class="nav-link lead">FAQ</a>
                     </li>
                     <li class="nav-item">
                         <a href="https://www.linkedin.com/in/bobbrand-software" class="nav-link lead">
@@ -76,14 +76,15 @@
     </nav>
 
 
-
     <section class="d-sm-flex align-items-center justify-content-betweeen bg-dark text-light mt-5 p-0 pt-5 p-md-3">
         <div class="container">
             <div class="bg-dark p-0 p-md-3 pt-md-5">
                 <h1><br>Software Development</h1>
                 <div class="single-post-content-wrapper pb-5">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum iusto impedit minus reiciendis harum dignissimos ex, debitis
-                    enim eius ipsam nulla! Corrupti alias error eaque blanditiis cumque tenetur, recusandae dignissimos?
+                    Throughout my career I have remained passionate about the craft of developing software. It is not only about writing software
+                    that is functional, but also about writing software that is reliable and maintainable. As a software
+                    leader, it is important to be remain technically strong to be able to relate to and collaborate with
+                    team members, to build mutual respect, and to contribute meaningfully to the success of the organization.
                 </div>
             </div>
 
@@ -97,7 +98,7 @@
                     my career, I have adapted and evolved my capability to program on several platforms and languages, but
                     I remain completely comfortable in the embedded RTOS programming environment. I studied Data Communication
                     for my Computer Science Masters, and I have been working in wireless communications throughout my career.
-                    It is no surprise that the recent projects highlighted here feature wireless connectivity.
+                    It is no surprise that the recent embedded projects highlighted here feature wireless connectivity.
                 </div>
 
                 <!-- Create two columns -->
@@ -149,30 +150,41 @@
             <!-- Python Development Section -->
 
             <!-- Overview Row for Python Projects -->
-            <div class="row mt-5 no-gutters pt-4 p-0 p-md-3 bg-secondary">
-                <h2>Python Development</h2>
-                <div class="single-post-content-wrapper">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque provident debitis illo, ducimus nobis ullam quam cumque aspernatur
-                    nulla laboriosam doloribus dolorem praesentium asperiores earum corporis architecto sunt dolore. Officia,
-                    rerum magnam modi quaerat facilis tempora autem voluptate! Odit veniam voluptatem voluptate cupiditate
-                    facilis ut autem, ex, ad distinctio cumque modi. Accusantium qui, maxime veniam nulla explicabo nisi?
-                    Tenetur, at quae rerum blanditiis, expedita labore, eligendi veniam sapiente suscipit fugiat quo animi
-                    dolor tempora iste fugit architecto cumque ex!
+            <div class="row mt-5 pt-4 p-0 p-md-3 bg-secondary">
+                <div class="bg-secondary p-4 pt-5">
+                    <h2>Python Projects</h2>
+                    <div class="image-wrapper float-end pe-0 p-2 d-none d-md-block">
+                        <img src="../img/python-logo.png" alt="" width="100">
+                    </div>
+                    <div class="single-post-content-wrapper">
+                        I started programming in Python around 2017 and now it has become my workhorse tool of choice for just about everything that
+                        is not performance constrained. It is an elegant language, able to adapt to something as simple as
+                        a script and as complex as a backend. Its ability to operate cross-platform and access REST interfaces
+                        and physical IO is particularly useful for tooling and test automation. PyPI Python modules are available
+                        for almost any service helping speed development. Some of the modules I have used include Request,
+                        PyUsb, PySerial, Jira, Trello, GitPython, FtpUtil, OpenPyxl, GitHub3, XmlToDict. Examples of Python
+                        tools I wrote are summarized in this section.
+                    </div>
                 </div>
 
                 <!-- Create two columns -->
                 <div class="col-md p-3 pt-5">
-                    <h3>Multi-threaded Gang Programmer</h3>
+                    <h3>Multi-Threaded Gang Programmer</h3>
                     <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
                         <img src="../img/communication.jpg" alt="" width="200">
                     </div> -->
                     <div class="single-post-content-wrapper">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga repudiandae iure totam commodi nemo eum tempore
-                        voluptatem, impedit necessitatibus culpa ipsam inventore, reprehenderit consectetur maxime similique
-                        iste, iusto perferendis. Id facilis, perspiciatis velit voluptate veniam expedita magnam ipsum repellendus,
-                        alias, libero rerum magni ducimus doloremque. Laboriosam odio accusantium tempora dolore necessitatibus
-                        fuga ipsa vitae magnam, saepe, nemo nesciunt fugiat. Perferendis eius quibusdam laboriosam iste soluta
-                        at quo!
+                        A multi-threaded gang-programming USB firmware update tool helps to mitigate delays in production line programming by allowing
+                        a relatively large number of devices to be programmed in parallel. As each device attaches to the
+                        USB bus, a worker thread is started to program that device while the main programmer waits for other
+                        devices to enumerate. There's an arbitrarily large number of worker threads that can run, and so
+                        the capacity of the programmer is limited by the PC's ability to service the USB bus. One challenge
+                        to overcome in the design was that a single device being programmed could reset, and therefore re-enumerate
+                        multiple times in the programming process. To handle this case, a worker thread has the ability to
+                        lock the bus so during an interim enumeration, new devices can not enumerate until the known device
+                        is back on the bus. The utilizaton of the PC resources is highly optimized in the case of gang programming,
+                        because the programming process itself is inherently bursty allowing the additional devices to work
+                        in the gaps.
                     </div>
                 </div>
 
@@ -182,18 +194,21 @@
                         <img src="../img/force_multiplier.png" alt="" width="100">
                     </div> -->
                     <div class="single-post-content-wrapper">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis, nulla illo blanditiis expedita quas quidem dolore distinctio
-                        eaque natus est, asperiores dolorem sequi laboriosam explicabo, hic eius veritatis facere! Modi repellendus
-                        ex quia iusto alias, recusandae accusamus repudiandae itaque? Ducimus aliquam officia, ullam quod
-                        quibusdam assumenda voluptatum doloremque quisquam, est debitis magni suscipit saepe similique nemo
-                        numquam molestiae? Minima odit sint eum, aperiam dolor, iusto non ratione quae dicta adipisci tempora
-                        perspiciatis commodi nemo quos asperiores assumenda quidem sequi porro! Consequuntur, quas?
+                        Test automation is an important force multiplier for small and large teams seeking to optimize the resources available for
+                        testing. But some challenges exist when automating functional testing of consumer hardware products.
+                        Often use cases involve the user physically interacting with the device by pushing buttons, spinning
+                        knobs, and getting feedback from LEDs. In response, I developed a test control framework that used
+                        PySerial and PyUSB modules to define device control classes for manipulating the physical interface
+                        of products. By leveraging additional Python application-specific modules to control video players,
+                        audio players, wireless connections, and power, this framework was able to implement stress tests
+                        that could be employed pre-emptively in build pipelines, or reactively such as to reproduce a reported
+                        problem or to confirm a fix.
                     </div>
                 </div>
             </div>
 
             <!-- Create another row -->
-            <div class="row no-gutters p-0 p-md-3 bg-secondary">
+            <div class="row p-0 p-md-3 bg-secondary">
                 <!-- Create two columns -->
                 <div class="col-md p-3 pt-md-5">
                     <h3>GitHub Actions Pipeline</h3>
@@ -201,12 +216,17 @@
                         <img src="../img/communication.jpg" alt="" width="200">
                     </div> -->
                     <div class="single-post-content-wrapper">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga repudiandae iure totam commodi nemo eum tempore
-                        voluptatem, impedit necessitatibus culpa ipsam inventore, reprehenderit consectetur maxime similique
-                        iste, iusto perferendis. Id facilis, perspiciatis velit voluptate veniam expedita magnam ipsum repellendus,
-                        alias, libero rerum magni ducimus doloremque. Laboriosam odio accusantium tempora dolore necessitatibus
-                        fuga ipsa vitae magnam, saepe, nemo nesciunt fugiat. Perferendis eius quibusdam laboriosam iste soluta
-                        at quo!
+                        YAML-based Devops pipelines for continuous integration, testing, and deployments have become more popular in the world of
+                        software build automation over the past few years, displacing older tools like Jenkins and Bamboo.
+                        GitHub's particular flavor of YAML pipelines is implemented as GitHub Actions. There are some benefits
+                        of GitHub's implementation, including its available secure storage of secrets, a third-party marketplace,
+                        GitHub's own REST API, and a very accessible implementation. Indeed, one of the advantages of this
+                        type of system is that it is more open to customization by the team, because pipelines can be implemented
+                        or customized without a strict dependence on an administrative gatekeeper. When joining a company
+                        that had no CI or build automation in place, I prototyped initial devops pipelines to support compilation
+                        and storage of artifacts, initially for Windows Xamarin products. Later, after onboarding a dedicated
+                        Devops engineer, I worked with the engineer to develop key parts of the process that was employed
+                        for our teams to use.
                     </div>
                 </div>
                 <div class="col-md p-3 pt-md-5">
@@ -215,12 +235,18 @@
                         <img src="../img/force_multiplier.png" alt="" width="100">
                     </div> -->
                     <div class="single-post-content-wrapper">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis, nulla illo blanditiis expedita quas quidem dolore distinctio
-                        eaque natus est, asperiores dolorem sequi laboriosam explicabo, hic eius veritatis facere! Modi repellendus
-                        ex quia iusto alias, recusandae accusamus repudiandae itaque? Ducimus aliquam officia, ullam quod
-                        quibusdam assumenda voluptatum doloremque quisquam, est debitis magni suscipit saepe similique nemo
-                        numquam molestiae? Minima odit sint eum, aperiam dolor, iusto non ratione quae dicta adipisci tempora
-                        perspiciatis commodi nemo quos asperiores assumenda quidem sequi porro! Consequuntur, quas?
+                        Jira and Git are powerful tools, but on their own, they are not aware of each other. There may be an exception for Atlassian's
+                        BitBucket, but in my situation, we were deploying from GitHub while tracking our work in Jira. To
+                        help get the most out of our pipelines, I implemented a release notes script using the Jira and GitHub3
+                        modules. The implementation of our deployment pipeline used a sequence of deploy branches, with PRs
+                        from one branch to another triggering pipeline jobs that would fulfil the deploy steps for the environment.
+                        This script would pull all of the commits from a deployment PR since the previous deployment PR.
+                        It would extract Jira keys from topic branch names in the PR commits. Once the Jira keys were known,
+                        then additional information was pulled from Jira including the description, author, dates, labels
+                        and this data was aggregated with the Git history to produce release notes that were organized as
+                        a series of Jira descriptions and the associated Git SHAs. The release notes data, organized by Jira
+                        instead of a more traditional git log, is more useful to POs and other stakeholders as well as to
+                        testers who often are tasked with verification at the Jira level.
                     </div>
                 </div>
             </div>
@@ -234,26 +260,29 @@
                         <img src="../img/communication.jpg" alt="" width="200">
                         </div> -->
                     <div class="single-post-content-wrapper">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fuga repudiandae iure totam commodi nemo eum tempore
-                        voluptatem, impedit necessitatibus culpa ipsam inventore, reprehenderit consectetur maxime similique
-                        iste, iusto perferendis. Id facilis, perspiciatis velit voluptate veniam expedita magnam ipsum repellendus,
-                        alias, libero rerum magni ducimus doloremque. Laboriosam odio accusantium tempora dolore necessitatibus
-                        fuga ipsa vitae magnam, saepe, nemo nesciunt fugiat. Perferendis eius quibusdam laboriosam iste soluta
-                        at quo!
+                        You might be thinking that Jira already has a burndown report, but I was working with a team that was simultaneously engaged
+                        on multiple projects in parallel. While we could track the team's burndown based on their progress
+                        against the sprint planning, this burndown measured the health of the team rather than the health
+                        of any particular project. I wrote a burndown tool using the JIRA REST interface to pull the relevant
+                        data from the Jira database on a project-by-project basis. This allowed me to collect and report
+                        on the burndown progress on a project-by-project basis.
                     </div>
                 </div>
                 <div class="col-md p-3 pt-md-5">
-                    <h3>Trello Tools</h3>
+                    <h3>Trello Product Backlog Tools</h3>
                     <!-- <div class="image-wrapper float-end pe-5 p-2 d-none d-md-block">
                         <img src="../img/force_multiplier.png" alt="" width="100">
                         </div> -->
                     <div class="single-post-content-wrapper">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis, nulla illo blanditiis expedita quas quidem dolore distinctio
-                        eaque natus est, asperiores dolorem sequi laboriosam explicabo, hic eius veritatis facere! Modi repellendus
-                        ex quia iusto alias, recusandae accusamus repudiandae itaque? Ducimus aliquam officia, ullam quod
-                        quibusdam assumenda voluptatum doloremque quisquam, est debitis magni suscipit saepe similique nemo
-                        numquam molestiae? Minima odit sint eum, aperiam dolor, iusto non ratione quae dicta adipisci tempora
-                        perspiciatis commodi nemo quos asperiores assumenda quidem sequi porro! Consequuntur, quas?
+                        The Trello backlog tools came out of a desire to build a backlog that could be used to visualize a long-term product roadmap.
+                        In Trello, a release train was represented by a series of lists of high-level features. Features
+                        were created as Trello Cards and were intended to align with high-level epics in the Jira backlog,
+                        subject to triage, prioritization, and modification at backlog meetings before they were delivered
+                        to engineering. Each list corresponded to a proposed feature bucket for a given list. In order to
+                        normalize the format of the feature requests, a form was used to collect the data. I wrote Jira tools
+                        that served as connectors between Jira and Trello using the respective REST APIs. Both Atlassian
+                        tools have powerful and intuitve APIs with good Python support out-of-the-box, and the Python logic
+                        was used to connect the tools in the ways necessary to implement the process.
                     </div>
                 </div>
             </div>
@@ -268,12 +297,10 @@
             <div class="row mt-5 no-gutters justify-content-around pt-4 p-0 p-md-3 bg-primary">
                 <h2>Education and Training</h2>
                 <div class="single-post-content-wrapper pb-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque provident debitis illo, ducimus nobis ullam quam cumque aspernatur
-                    nulla laboriosam doloribus dolorem praesentium asperiores earum corporis architecto sunt dolore. Officia,
-                    rerum magnam modi quaerat facilis tempora autem voluptate! Odit veniam voluptatem voluptate cupiditate
-                    facilis ut autem, ex, ad distinctio cumque modi. Accusantium qui, maxime veniam nulla explicabo nisi?
-                    Tenetur, at quae rerum blanditiis, expedita labore, eligendi veniam sapiente suscipit fugiat quo animi
-                    dolor tempora iste fugit architecto cumque ex!
+                    I attended Case Institute of Technology, the well-regarded engineering school at Case Western Reserve University, majoring
+                    in Computer Engineering. Later, after working several years as a software engineer at Motorola, I attended
+                    DePaul University in Chicago, receiving my Masters Degree in Computer Science with an emphasis on Data
+                    Communications and Networking and additional coursework in human-computer interaction.
                 </div>
 
                 <!-- Create two columns -->

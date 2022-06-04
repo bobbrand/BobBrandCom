@@ -1,10 +1,10 @@
-/* Adds 60 pixel ghost element after the navbar 
+/* Adds 60 pixel ghost element after the navbar */
+
 body::before {
     display: block;
     content: '';
     height: 60px;
 }
-*/
 
 #map {
     width: 100%;

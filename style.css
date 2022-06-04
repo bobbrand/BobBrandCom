@@ -1,9 +1,10 @@
-/* Adds 60 pixel ghost element after the navbar */
+/* Adds 60 pixel ghost element after the navbar 
 body::before {
     display: block;
     content: '';
     height: 60px;
 }
+*/
 
 #map {
     width: 100%;
@@ -11,13 +12,14 @@ body::before {
     border-radius: 10px;
 }
 
+
 /* As long as it's over 768 (medium) we are going to take our custom class and make it take 50% of the space */
+
 @media (min-width: 768px) {
     .news-input {
         width: 50%;
     }
 }
-
 
 input[type="email"],
 textarea,
@@ -26,6 +28,7 @@ fieldset {
     border: 1px solid #333;
     box-sizing: border-box;
 }
+
 
 /* input:invalid {
     box-shadow: 0 0 4px 2px red;

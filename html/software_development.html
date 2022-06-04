@@ -52,7 +52,10 @@
                         <a href="../#first-blog" class="nav-link lead">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../#skills" class="nav-link lead">Skills</a>
+                        <a href="./technical_management.html" class="nav-link lead">Manage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link lead">Develop</a>
                     </li>
                     <li class="nav-item">
                         <a href="../#questions" class="nav-link lead">Questions</a>
@@ -73,9 +76,10 @@
     </nav>
 
 
+
     <section class="d-sm-flex align-items-center justify-content-betweeen bg-dark text-light mt-5 p-0 pt-5 p-md-3">
         <div class="container">
-            <div class="bg-dark p-0 p-md-3 pt-lg-5">
+            <div class="bg-dark p-0 p-md-3 pt-md-5">
                 <h1><br>Software Development</h1>
                 <div class="single-post-content-wrapper pb-5">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum iusto impedit minus reiciendis harum dignissimos ex, debitis
@@ -319,12 +323,23 @@
             </div>
         </div>
 
-        <!-- Last section holds the back button -->
-        <section class="bg-dark text-light p-2 p-md-3 pt-5 pb-5">
-            <div class="container">
-                <a href="javascript:javascript:history.go(-1)" class="btn btn-secondary mt-3">Back</a>
+
+        <!-- Footer -->
+        <footer class="p-2 py-2 bg-dark text-white text-left position-relative">
+            <!-- container is layout element within bootstrap grid -->
+            <!-- bottom = vertical bottom, start = horizontal left, end = horizontal right  -->
+            <div class="d-flex flex-row-reverse justify-content-start">
+                <a href="#" class="d-flex p-1">
+                    <i class="bi bi-arrow-up-circle h1"></i>
+                </a>
+                <a href="javascript:javascript:history.go(-1)" class="d-flex p-1">
+                    <i class="bi bi-arrow-left-circle h1"></i>
+                </a>
             </div>
-        </section>
+            <div class="d-flex flex-row-reverse justify-content-center">
+                <p class="small justify-content-end">Copyright &copy; 2022 Bob Brand</p>
+            </div>
+        </footer>
 </body>
 
 </html>

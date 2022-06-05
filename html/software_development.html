@@ -97,9 +97,9 @@
                 <div class="single-post-content-wrapper">
                     My earliest work as a software engineer was developing embedded real-time software in C and assembly for mobile phones. Throughout
                     my career, I have adapted and evolved my capability to program on several platforms and languages, but
-                    I remain completely comfortable in the embedded RTOS programming environment. I studied Data Communication
-                    for my Computer Science Masters, and I have been working in wireless communications throughout my career.
-                    It is no surprise that the recent embedded projects highlighted here feature wireless connectivity.
+                    I remain completely comfortable in the embedded RTOS programming environment. My graduate studies emphasized
+                    data communication and networking, and I have been working in wireless communications throughout my career.
+                    These recent embedded projects feature wireless connectivity.
                 </div>
 
                 <!-- Create two columns -->
@@ -113,11 +113,11 @@
                         they would be unable to deliver BLE connectivity. This would block mobile connectivity for command
                         and control of the headset, a key product requirement. To prevent the project from falling behind,
                         over the course of two sprints, I implemented BLE support in the headset using an available Bluetopia
-                        stack I had not used previously. This involved defining and implementing the GATT database, services,
-                        characteristics, advertising, connections, and connecting the the endpoints to the data store on
-                        the headset. I created and reviewed a design using PlantUML, implemented the feature in C, implemented
-                        a test mock that helped me to debug the logic more quickly, and worked with our mobile apps developers
-                        to test the functionality with iOS and Android applications.
+                        software stack. This involved creating a BLE service, defining and implementing the GATT database,
+                        characteristics, attributes, advertising, and connections, and connecting the the endpoints to the
+                        data store on the headset. I created and reviewed a design using PlantUML, implemented the feature
+                        in C, implemented a test mock that helped me to debug the logic more quickly, and worked with our
+                        mobile apps developers to test the functionality with iOS and Android applications.
                     </div>
                 </div>
                 <div class="col-md p-3 pt-5">
@@ -185,7 +185,7 @@
                         to overcome in the design was that a single device being programmed could reset, and therefore re-enumerate
                         multiple times in the programming process. To handle this case, a worker thread has the ability to
                         lock the bus so during an interim enumeration, new devices can not enumerate until the known device
-                        is back on the bus. The utilizaton of the PC resources is highly optimized in the case of gang programming,
+                        is back on the bus. The utilization of the PC resources is highly optimized in the case of gang programming,
                         because the programming process itself is inherently bursty allowing the additional devices to work
                         in the gaps.
                     </div>
@@ -204,7 +204,7 @@
                         PySerial and PyUSB modules to define device control classes for manipulating the physical interface
                         of products. By leveraging additional Python application-specific modules to control video players,
                         audio players, wireless connections, and power, this framework was able to implement stress tests
-                        that could be employed pre-emptively in build pipelines, or reactively such as to reproduce a reported
+                        that could be employed preemptively in build pipelines, or reactively such as to reproduce a reported
                         problem or to confirm a fix.
                     </div>
                 </div>
@@ -220,16 +220,17 @@
                     </div> -->
                     <div class="single-post-content-wrapper">
                         YAML-based Devops pipelines for continuous integration, testing, and deployments have become more popular in the world of
-                        software build automation over the past few years, displacing older tools like Jenkins and Bamboo.
-                        GitHub's particular flavor of YAML pipelines is implemented as GitHub Actions. There are some benefits
-                        of GitHub's implementation, including its available secure storage of secrets, a third-party marketplace,
-                        GitHub's own REST API, and a very accessible implementation. Indeed, one of the advantages of this
-                        type of system is that it is more open to customization by the team, because pipelines can be implemented
-                        or customized without a strict dependence on an administrative gatekeeper. When joining a company
-                        that had no CI or build automation in place, I prototyped initial devops pipelines to support compilation
-                        and storage of artifacts, initially for Windows Xamarin products. Later, after onboarding a dedicated
-                        Devops engineer, I worked with the engineer to develop key parts of the process that was employed
-                        for our teams to use.
+                        software build automation over the past few years, often displacing older tools like Jenkins and
+                        Bamboo. GitHub's particular flavor of YAML pipelines is implemented as GitHub Actions. There are
+                        some benefits of GitHub's implementation, including its available secure storage of secrets, support
+                        for local build/test machines, a third-party marketplace, GitHub's own REST API, and a very accessible
+                        implementation. Indeed, one of the advantages of this type of system is that it is more open to customization
+                        by the team, because pipelines can be implemented or customized without a strict dependence on an
+                        administrative gatekeeper. When joining a company that had no CI or build automation in place, I
+                        prototyped initial build pipelines to support compilation and storage of artifacts, initially for
+                        Windows Xamarin products. Later, after onboarding a dedicated Devops engineer, I worked with the
+                        engineer to develop key parts of the process that was employed across embedded, mobile, and desktop
+                        projects for our software and firmware teams to use.
                     </div>
                 </div>
                 <div class="col-md p-3 pt-md-5">
@@ -241,15 +242,16 @@
                         Jira and Git are powerful tools, but on their own, they are not aware of each other. There may be an exception for Atlassian's
                         BitBucket, but in my situation, we were deploying from GitHub while tracking our work in Jira. To
                         help get the most out of our pipelines, I implemented a release notes script using the Jira and GitHub3
-                        modules. The implementation of our deployment pipeline used a sequence of deploy branches, with PRs
-                        from one branch to another triggering pipeline jobs that would fulfil the deploy steps for the environment.
-                        This script would pull all of the commits from a deployment PR since the previous deployment PR.
-                        It would extract Jira keys from topic branch names in the PR commits. Once the Jira keys were known,
-                        then additional information was pulled from Jira including the description, author, dates, labels
-                        and this data was aggregated with the Git history to produce release notes that were organized as
-                        a series of Jira descriptions and the associated Git SHAs. The release notes data, organized by Jira
-                        instead of a more traditional git log, is more useful to POs and other stakeholders as well as to
-                        testers who often are tasked with verification at the Jira level.
+                        Python modules. The implementation of our deployment pipeline used a sequence of deploy branches,
+                        with pull requests from one branch to another triggering pipeline jobs that would fulfil the deploy
+                        steps for the environment. This release notes script would pull all of the commits from a deployment
+                        pull request since the previous deployment. It would extract Jira keys from topic branch names in
+                        the Git commits. Once the Jira keys were known, then additional information was pulled from Jira
+                        including the description, author, dates, and labels, and this data was aggregated with the Git history
+                        to produce release notes that were organized as a series of Jira descriptions and the associated
+                        Git SHAs. The release notes data, organized by Jira instead of a more traditional git log listing,
+                        is more useful to product owners and other stakeholders as well as to testers who often are tasked
+                        with verification at the Jira ticket level.
                     </div>
                 </div>
             </div>
@@ -268,7 +270,8 @@
                         against the sprint planning, the builtin burndown report measured the health of the team rather than
                         the health of any particular project. I wrote a burndown tool using the JIRA REST interface to pull
                         the relevant data from the Jira database on a project-by-project basis. This allowed me to collect
-                        and report on the burndown progress on a project-by-project basis.
+                        and report on the burndown progress for specific projects even while the team was working on multiple
+                        projects in parallel.
                     </div>
                 </div>
                 <div class="col-md p-3 pt-md-5">
@@ -300,10 +303,10 @@
             <div class="row mt-5 no-gutters justify-content-around pt-4 p-0 p-md-3 bg-primary">
                 <h2>Education and Training</h2>
                 <div class="single-post-content-wrapper pb-5">
-                    I attended Case Institute of Technology, the well-regarded engineering school at Case Western Reserve University, majoring
-                    in Computer Engineering. Later, after working several years as a software engineer at Motorola, I attended
-                    DePaul University in Chicago, receiving my Masters Degree in Computer Science with an emphasis on Data
-                    Communications and Networking and additional coursework in human-computer interaction.
+                    I attended Case Western Reserve University, majoring in Computer Engineering, and achieving a Bachelors of Engineering in
+                    1989. Later, after working several years as a software engineer at Motorola, I attended DePaul University
+                    in Chicago, receiving my Masters Degree in Computer Science with an emphasis on data communications and
+                    networking and additional coursework in human-computer interaction.
                 </div>
 
                 <!-- Create two columns -->

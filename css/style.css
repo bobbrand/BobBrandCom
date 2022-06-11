@@ -13,6 +13,13 @@ body::before {
 }
 
 
+/* Allows jump to connect anchor to scroll it down to avoid the navbar */
+
+#connect {
+    scroll-margin-top: 5em;
+}
+
+
 /* As long as it's over 768 (medium) we are going to take our custom class and make it take 50% of the space */
 
 @media (min-width: 768px) {

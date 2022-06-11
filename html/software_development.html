@@ -110,15 +110,17 @@
                         <img src="../img/communication.jpg" alt="" width="200">
                     </div> -->
                     <div class="single-post-content-wrapper">
-                        2021: One of the teams I was managing found itself in a difficult position. Our supplier reported late in the program that
-                        they would be unable to deliver BLE connectivity. This would block mobile connectivity for command
+                        One of the teams I was managing found itself in a difficult position. Our silicon supplier reported late in the program that
+                        they would be unable to deliver BLE connectivity for one of the major headset designs that was in
+                        progress with mass production only weeks away. Missing BLE would block mobile connectivity for command
                         and control of the headset, a key product requirement. To prevent the project from falling behind,
                         over the course of two sprints, I implemented BLE support in the headset using an available Bluetopia
                         software stack. This involved creating a BLE service, defining and implementing the GATT database,
-                        characteristics, attributes, advertising, and connections, and connecting the the endpoints to the
-                        data store on the headset. I created and reviewed a design using PlantUML, implemented the feature
-                        in C, implemented a test mock that helped me to debug the logic more quickly, and worked with our
-                        mobile apps developers to test the functionality with iOS and Android applications.
+                        characteristics, attributes, advertising, and connections. It also included connecting the endpoints
+                        to the data store on the headset to control settings and report back status. I created and reviewed
+                        a design using PlantUML and Confluence, implemented the feature in C, implemented a test mock that
+                        helped me to debug the logic more quickly, and worked with our mobile apps developers to integrate
+                        and test the functionality with iOS and Android peer applications.
                     </div>
                 </div>
                 <div class="col-md p-3 pt-5">
@@ -127,9 +129,10 @@
                         <img src="../img/force_multiplier.png" alt="" width="100">
                     </div> -->
                     <div class="single-post-content-wrapper pb-4">
-                        2022: The hardware was Cypress 20721 single-chip Bluetooth audio SoC. But the application for this design required significant
-                        customization to enable it to work as a peripheral chip in a larger design. This included a new portable-host
-                        library that would embed on another MCU, a new chip control interface, and modifications of the 20721
+                        I took on the task of upgrading the Bluetooth solution for a series of headsets in development. The hardware was Cypress
+                        20721 single-chip Bluetooth audio SoC. The application for this design required significant customization
+                        to enable it to work as a peripheral chip in a larger multi-chip design. This included a new portable-host
+                        library that would embed on a PIC32 MCU, a new chip control interface, and modifications of the 20721
                         on-chip firmware to tailor it to the needs of these particular products for Bluetooth audio as well
                         as BLE connectivity. This solution included a complete platform bring-up for the new tools and environment,
                         documented designs of the new host library and SoC application firmware, a stand-alone testing mock

@@ -15,7 +15,7 @@
     <!-- My Styles-->
     <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- Analytics -->
+    <!-- Heap Analytics -->
     <script type="text/javascript">
         window.heap = window.heap || [], heap.load = function(e, t) {
             window.heap.appid = e, window.heap.config = t = t || {};
@@ -32,6 +32,21 @@
                 ], o = 0; o < p.length; o++) heap[p[o]] = n(p[o])
         };
         heap.load("1721811100");
+    </script>
+
+    <!-- Google Analytics -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1C76D6FXM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-E1C76D6FXM');
     </script>
     <title>BobBrand.Com</title>
 </head>

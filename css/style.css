@@ -13,7 +13,8 @@ body::before {
 }
 
 
-/* Forces the card text height to 2 lines at all breaks, even if the lines of text differs
+/* Forces the card text height to 2 lines at all breaks, even if the lines of text differs */
+
 .card-text {
     height: 60px;
 }
